@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 const Header = () => {
     return (
         <header>
-            <div className="text-white bg-black">
+            <div className="text-white bg-orange-800">
                 <h1 className=" text-center p-9">Info Pod</h1>
 
         <div className="flex space-x-4">
