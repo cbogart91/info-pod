@@ -1,0 +1,19 @@
+{
+  "name": "info-pod",
+  "version": "1.0.0",
+  "description": "A site with various ways to store info",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cbogart91/info-pod.git"
+  },
+  "author": "Cody Bogart",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cbogart91/info-pod/issues"
+  },
+  "homepage": "https://github.com/cbogart91/info-pod#readme"
+}
