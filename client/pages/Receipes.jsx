@@ -1,13 +1,15 @@
 import { useState } from 'react';
 
 
-const Receipe = () => {
+const Receipes = () => {
     const [ inputValue, setInputValue ] = useState('');
     const handleChange = (event) => {
         setInputValue(event.target.value);
     };
 
     return (
+        <section id="receipes"
+               >
         <div>
             <p>Receipes</p>
             <form className="grid grid-cols-2 gap-4">
@@ -32,7 +34,8 @@ const Receipe = () => {
         </div>
 
         </div>
+        </section>
     );
 }
 
-export default Receipe;
+export default Receipes;

@@ -1,19 +1,25 @@
-import { Link } from 'react-router-dom'
+import Navbar from './Navbar';
+import { useState } from 'react';
 
-const Header = () => {
+
+function Header(){
+    const [navOpen, setNavOpen] = useState(false);
+
     return (
-        <header>
-            <div className="text-white bg-orange-800">
-                <h1 className=" text-center p-9">Info Pod</h1>
-
-        <div className="flex space-x-4">
-            <Link to="/">Home</Link>
-            <Link to="/Receipe">Receipe</Link>
-         </div>
-
+      <header className="fixed top-0 left-0 w-full h-20 flex items-center z-40 bg-gradient-to-b from-zinc-900 to-zinc-900/0">
+        <div className="max-w-screen-2xl w-full mx-auto px-4 flex justify-between items-center md:px-6 md:grid md:grid-cols-[1fr,3fr,1fr]">
+            <h1>
+                
+                </h1>
+                    <div className="relative md:justify-self-center">
+                        <button className="menu-btn md:hidden" onClick={() => setNavOpen((prev) => !prev) }>
+                            <span className="material-symbols-rounded"> {navOpen ? 'X' : 'menu' } </span>
+                        </button>
+                        <Navbar navOpen={navOpen} />
+                    </div>
             </div>
         </header>
     );
-};
+}
 
 export default Header;

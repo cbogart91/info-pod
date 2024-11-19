@@ -1,29 +1,35 @@
-import { createRoot } from 'react-dom/client';
+import React from 'react';
+import ReactDOM from 'react-dom/client'
+import App from './App';
+import './index.css';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import './index.css'
+// import 'bootstrap/dist/css/bootstrap.min.css';
 
-import Receipe from '../pages/Receipe.jsx'
-import Home from '../pages/Home.jsx'
-import App from './App.jsx'
-
+import Home from "/pages/Home";
+import Receipes from "/pages/Receipes";
 
 const router = createBrowserRouter([
   {
     path: '/',
     element: <App />,
     children: [
-      {
-        index: true,
-        element: <Home />
-      },
-      {
-        path: '/Receipe',
-        element: <Receipe />,
-      },
-    ],
+  {
+    index: true,
+    path: '/home',
+    element: <Home />
   },
-]);
+  {
+    path: "/receipes",
+    element: <Receipes />
+    },
+  ],
+  },
+])
 
-createRoot(document.getElementById('root')).render(
-    <RouterProvider router={router} />
-)
+
+
+ReactDOM.createRoot(document.getElementById('root')).render(
+  <React.StrictMode>
+    <RouterProvider router={router}/>
+  </React.StrictMode>
+);
